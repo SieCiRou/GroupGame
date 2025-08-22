@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>分組遊戲</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+
+            {% if error %}
+                <p class="error">{{ error }}</p>
+            {% endif %}
+
+            <form id="groupForm" action="/group" method="post">
+                <label for="names">請輸入名字 (每行一個名字):</label>
+                <textarea id="names" name="names" rows="10" cols="30"></textarea>
+                <label for="num_groups">分組數量:</label>
+                <input type="number" id="num_groups" name="num_groups" min="1">
+                <button type="submit">開始分組</button>
+            </form>
+        </div>
+
+        <div class="sidebar">
+            {% if groups %}
+                <div class="group-result">
+                    {% for group in groups %}
+                        <div class="group-item">
+                            <h3>第 {{ loop.index }} 組</h3>
+                            <ul>
+                                {% for name in group %}
+                                    <li>{{ name }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    {% endfor %}
+                    <a href="/" class="reset-btn">重新分組</a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
