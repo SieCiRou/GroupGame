@@ -1,0 +1,174 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif; /* 使用類似 POPFUN 的字體 */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f5; /* 淺灰背景，類似 POPFUN */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff; /* 白色背景框 */
+    border: 2px dashed #ccc; /* 虛線框，模仿 POPFUN 設計 */
+    border-radius: 10px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #000; /* 黑色實線框 */
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-content::before {
+    content: "MVE GROUP GAME"; /* POPFUN 風格標題 */
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(45deg, #ff6f61, #6b5b95); /* POPFUN 風格漸層 */
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 28px;
+    font-weight: 1000;
+    text-transform: uppercase; /* 大寫，符合 POPFUN 風格 */
+    z-index: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    z-index: 2;
+    margin-top: 60px; /* 避免與標題重疊 */
+}
+
+label {
+    font-weight: 700;
+    color: #333;
+    font-size: 20px;
+    line-height: 3;
+    text-transform: uppercase; /* 模仿 POPFUN 標籤風格 */
+}
+
+textarea {
+    resize: vertical;
+    padding: 12px;
+    border: 2px solid #6b5b95; /* 紫色邊框，POPFUN 風格 */
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f9f9ff; /* 淺紫背景 */
+}
+
+input[type="number"] {
+    padding: 12px;
+    width: 150px;
+    border: 2px solid #6b5b95;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f9f9ff;
+}
+
+button {
+    background-color: #ff6f61; /* 粉紅紅色，POPFUN 風格 */
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #6b5b95; /* 紫色hover效果 */
+}
+
+.error {
+    color: #ff6f61;
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.sidebar {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #000; /* 黑色實線框 */
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sidebar::before {
+    content: "分組結果";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(40deg, #eed984, #ff6795); /* 黃色到粉紅漸層 */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 1.2;
+}
+
+.group-result {
+    margin-top: 50px; /* 避免與標題重疊 */
+    position: relative;
+    z-index: 2;
+}
+
+.group-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f9f9ff; /* 淺紫背景 */
+    border: 1px dashed #6b5b95; /* 虛線邊框 */
+    border-radius: 8px;
+}
+
+.group-item h3 {
+    margin: 0 0 10px 0;
+    color: #c79816; /* 黃色標題 */
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 2px 0;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.reset-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #6b5b95;
+    color: white;
+    border: 2px solid #5c5c5c;
+    border-radius: 8px;
+    font-weight: bold;
+}
